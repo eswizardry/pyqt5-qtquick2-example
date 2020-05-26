@@ -1,9 +1,9 @@
 import os
 import sys
 
-from PyQt5.QtCore import QUrl, QObject
-from PyQt5.QtWidgets import QApplication
-from PyQt5.QtQml import QQmlApplicationEngine
+from PySide2.QtCore import QUrl, QObject
+from PySide2.QtWidgets import QApplication
+from PySide2.QtQml import QQmlApplicationEngine
 from pyqt5_qtquick2_example import resources  # load resources built by pyrcc5
 
 
@@ -33,7 +33,7 @@ qtquick2Themes = engine.rootObjects()[0].findChild(
     QObject,
     'qtquick2Themes'
 )
-qtquick2Themes.setProperty('text', os.environ['QT_QUICK_CONTROLS_STYLE'])
+# qtquick2Themes.setProperty('text', os.environ['QT_QUICK_CONTROLS_STYLE'])
 
 # engine.quit.connect(app.quit)
 # Unnecessary,
